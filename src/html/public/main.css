@@ -6,6 +6,9 @@ a{
     outline: medium none;
     text-decoration: none;
 }
+a:hover{
+    text-decoration: underline;
+}
 body{
     font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Microsoft YaHei UI","Microsoft YaHei",sans-serif;font-size: 14px;line-height: 1.6;background: none repeat scroll 0 0 #FFFAFA;color: #303030;
 }
