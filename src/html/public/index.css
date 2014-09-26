@@ -1,7 +1,3 @@
-.main{
-    width: 1000px;margin: 0 auto;
-    margin-top: 30px;
-}
 .main:after{
     content: "."; display: block; height: 0; clear: both; visibility: hidden;
 }
