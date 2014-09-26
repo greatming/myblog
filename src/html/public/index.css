@@ -1,0 +1,80 @@
+.main{
+    width: 1000px;margin: 0 auto;
+    margin-top: 30px;
+}
+.main:after{
+    content: "."; display: block; height: 0; clear: both; visibility: hidden;
+}
+.main .container{
+    float: left;
+    width: 700px;
+}
+.main .right{
+    float: left;
+    width: 295px;
+    margin-left: 5px;
+}
+
+#article-blocks{
+
+}
+#article-blocks .art-block{
+    border-top: 1px dashed #DBDBDB;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+#article-blocks .art-block .title{
+    font-size: 150%;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+#article-blocks .art-block .des:after{
+    content: "...";
+}
+#article-blocks .art-block .abs{
+    font-weight: bolder;
+}
+#article-blocks .art-block .meta{
+    text-align: right;
+    margin-top: 10px;
+    font-size: 90%;
+    color: #CDC9C9;
+}
+#article-blocks .art-block .meta a{
+    color: #CDC9C9;
+    display: inline-block;
+    margin-right: 3px;
+    background-color: #AAAAAA;
+}
+
+.r-title{
+    background: none repeat scroll 0 0 #303030;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #ffffff;
+    font-weight: lighter;
+    height: 22px;
+    line-height: 22px;
+    margin: 0;
+    padding: 4px 10px;
+}
+
+#tag-cloud{
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    margin: 0 0 20px 0;
+}
+
+#tag-cloud:after {
+    content: "."; display: block; height: 0; clear: both; visibility: hidden;
+}
+#tag-cloud a{
+    background-color: #303030;
+    color: #fff;
+    display: block;
+    float: left;
+    line-height: 1.2em;
+    margin: 6px 10px;
+    padding: 3px;
+}
