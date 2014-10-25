@@ -11,7 +11,19 @@ class IndexController extends BaseController
 
     public function actionArticle(){
         $this->setActionName("文章管理");
-        $this->render('article');
+        $criteria = new CDbCriteria();
+        $criteria->condition='is_del=:is_del';
+        $criteria->params=array(':is_del'=>0);
+
+        $count=Article::model()->count($criteria);
+        $pages=new CPagination($count);
+        $pages->pageSize=2;
+        $pages->applyLimit($criteria);
+        $list = Article::model()->findAll($criteria);
+        $this->render('article',array(
+            "list"=>$list,
+            "pages"=>$pages
+        ));
     }
 
     public function actionAddArticle(){
