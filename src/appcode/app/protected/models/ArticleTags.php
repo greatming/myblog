@@ -59,6 +59,7 @@ class ArticleTags extends CActiveRecord
 			'tag_id' => 'Tag',
 			'tag_name' => 'Tag Name',
 			'create_time' => 'Create Time',
+            'is_del' => 'Is Del',
 		);
 	}
 
@@ -101,4 +102,23 @@ class ArticleTags extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    public function getArticleListPageByTag($tag = "all"){
+        $criteria = new CDbCriteria();
+        $criteria->compare('is_del',0);
+        if($tag !== "all"){
+            $criteria->compare('tag_name',$tag);
+        }
+        $count=self::model()->count($criteria);
+        $article_list = array();
+        $pages=new CPagination($count);
+        $pages->pageSize=ArticleVars::SEARCH_TAGS_LIMIT;
+        $pages->applyLimit($criteria);
+        $list = self::model()->findAll($criteria);
+        foreach($list as $item){
+            $article_data = Article::model()->findByPk($item->article_id);
+            array_push($article_list,$article_data);
+        }
+        return array($article_list,$pages);
+    }
 }

@@ -17,10 +17,9 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+        'application.controllers.*',
+        'ext.YiiMongoDbSuite.*',
 	),
-    'params'=>array(
-      'qqq'=>11
-    ),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
@@ -71,7 +70,16 @@ return array(
 			'errorAction'=>'site/error',
 		),
 
-		'log'=>array(
+        'mongodb' => array(
+            'class'            => 'EMongoDB', //主文件
+            'connectionString' => 'mongodb://127.0.0.1:27017', //服务器地址
+            'dbName'           => 'blog',//数据库名称
+            'fsyncFlag'        => true, //mongodb的确保所有写入到数据库的安全存储到磁盘
+            'safeFlag'         => true, //mongodb的等待检索的所有写操作的状态，并检查
+            'useCursor'        => false, //设置为true，将启用游标
+        ),
+
+        'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
                 /*
@@ -84,7 +92,8 @@ return array(
 
 //				array(
 //					'class'=>'CWebLogRoute',
-//				),
+//                    'categories'=>'system.db.*'
+//                ),
 
 			),
 		),

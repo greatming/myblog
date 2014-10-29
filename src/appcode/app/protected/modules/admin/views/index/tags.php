@@ -48,7 +48,7 @@
         </div>
     </div>
 </div>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/ext/bootstrap//js/bootbox.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/ext/bootstrap/js/bootbox.min.js"></script>
 <script type="text/javascript">
     $(function(){
         var add_tag_url = "<?php echo $this->createUrl("index/SaddTag");?>";

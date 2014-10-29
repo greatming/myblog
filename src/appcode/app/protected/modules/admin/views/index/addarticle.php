@@ -220,7 +220,7 @@
         $.post(add_article,article_obj,function(ret){
             if(ret.status == 1){
                 $(".art_error").addClass("hide");
-                //window.location.href = '<?php echo $this->createUrl("index/Article");?>'
+                window.location.href = '<?php echo $this->createUrl("index/Article");?>'
             }else{
                 show_error(ret.info);
             }

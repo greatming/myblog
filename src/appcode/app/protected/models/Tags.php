@@ -98,4 +98,11 @@ class Tags extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    public function getTagsList($limit = PHP_INT_MAX){
+        $tags_list =  Tags::model()->findAll(array(
+            "limit" => $limit
+        ));
+        return CommonHelper::formatArrayData($tags_list);
+    }
 }
