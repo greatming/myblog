@@ -65,3 +65,32 @@
     float: right;
     display: inline-block;
 }
+
+.pagination li{
+    list-style-type:none;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 6px 10px !important;
+    background-color:#EAEAEA;
+    border: 1px solid #CCCCCC;
+    border-radius:3px;
+    color: #000000;
+}
+
+.pagination li:hover , .pagination .selected{
+    background-color:#3A5FCD;
+    cursor:pointer;
+    color: #ffffff;
+}
+
+.pagination li a:hover{
+    text-decoration: none;
+}
+
+
+.pagination .first, .pagination .last{
+    display: none;
+}
+.pagination a{
+    color: inherit;
+}
