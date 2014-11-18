@@ -14,9 +14,11 @@
     <ul>
         <li><a href="/">首页</a></li>
         <li class="sep">|</li>
-        <li><a href="/index/search">标签</a></li>
+        <li><a href="/index/tags">标签</a></li>
         <li class="sep">|</li>
         <li><a target="_blank" href="http://weibo.com/hmreal">微博</a></li>
+        <li class="sep">|</li>
+        <li><a href="<?php echo Yii::app()->params['hmDomain'];?>/comment">留言</a></li>
         <li class="sep">|</li>
     </ul>
 </div>

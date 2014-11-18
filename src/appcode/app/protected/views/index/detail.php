@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/assets/css/detail.css">
+<link rel="stylesheet" href="/extensions/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+<script src="/extensions/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
 <div class="article">
     <h3 class="title"><?php echo $artitle_data->title;?></h3>
     <p class="meta"><span>发布于:<?php echo date("Y-m-d",strtotime($artitle_data->create_time));?></span>
@@ -12,3 +14,6 @@
         <?php echo $artitle_data->addi->content;?>
     </div>
 </div>
+<script>
+    SyntaxHighlighter.all();
+</script>

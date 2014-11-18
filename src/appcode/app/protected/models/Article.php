@@ -252,4 +252,19 @@ class Article extends CActiveRecord
         return CommonHelper::formatArrayData($article_list);
     }
 
+    public function getArticleListPage(){
+        $criteria = new CDbCriteria();
+        $criteria->compare('is_del',0);
+        $count=self::model()->count($criteria);
+        $article_list = array();
+        $pages=new CPagination($count);
+        $pages->pageSize=ArticleVars::MORE_TAGS_LIMIT;
+        $pages->applyLimit($criteria);
+        $list = self::model()->findAll($criteria);
+        foreach($list as $item){
+            array_push($article_list,$item);
+        }
+        return array($article_list,$pages);
+    }
+
 }

@@ -7,7 +7,6 @@
  */
 
 class HttpHeler {
-
     static public function getGET($key){
         if(isset($_GET[$key]))
             return $_GET[$key];

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title></title>
+    <link rel="stylesheet" href="<%= staprex %>css/main.css">
+    <link rel="stylesheet" href="<%= staprex %>css/comment.css">
+</head>
+<body>
+
+<header class="header">
+    <div id="web-title"><strong>greatming's Blog</strong></div>
+</header>
+<div class="nav">
+    <ul>
+        <li><a href="<%= baseurl %>">首页</a></li>
+        <li class="sep">|</li>
+        <li><a href="<%= baseurl %>index/tags">标签</a></li>
+        <li class="sep">|</li>
+        <li><a target="_blank" href="http://weibo.com/hmreal">微博</a></li>
+        <li class="sep">|</li>
+        <li><a href="/comment">留言</a></li>
+        <li class="sep">|</li>
+    </ul>
+</div>
+<div class="main">
+    <ul class="comment">
+
+    </ul>
+    <div>
+        <form action="" id="contact" >
+            <!-- Form fields wrapper -->
+            <div id="wrapper" class="clearfix">
+                <!-- Name -->
+                <input id="user_name" type="text" class="has_icon" name="user_name" placeholder="ID..." required>
+                <!-- Contact -->
+                <textarea name="" id="content" placeholder="说点什么吧..." required></textarea>
+                <!-- Submit -->
+                <button id="submit" type="button" >
+                    留个言吧
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<footer class="footer">
+    <p>© Copyright 2014 greatming's Blog.All rights reserved.</p>
+</footer>
+<link rel="stylesheet" href="<%= staprex %>plugin/popup/jquery-impromptu.min.css"/>
+<link rel="stylesheet" href="<%= staprex %>plugin/popup/themes/base.css"/>
+<script src="<%= staprex %>js/hm.js"></script>
+<script src="<%= staprex %>plugin/popup/jquery-impromptu.min.js"></script>
+<script src="<%= staprex %>plugin/moment.js"></script>
+<script src="<%= staprex %>js/comment.js"></script>
+</body>
+</html>

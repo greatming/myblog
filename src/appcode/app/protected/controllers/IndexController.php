@@ -39,6 +39,15 @@ class IndexController extends BaseController
         ));
     }
 
+    public function actionMore(){
+        $article_model = new Article();
+        list($article_list,$page) = $article_model->getArticleListPage();
+        $this->render('search', array(
+            "article_list" => $article_list,
+            "page" => $page
+        ));
+    }
+
     public function actionDetail($id){
         $artitle_model = new Article();
         $artitle_data = $artitle_model->getArticleInfoById($id);

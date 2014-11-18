@@ -3,7 +3,7 @@
     <div id="article-blocks">
 
     </div>
-    <div class="more"><a href="/index/search">more >></a></div>
+    <div class="more"><a href="/more">more >></a></div>
 </div>
 <div class="right">
     <h3 class="r-title">TAGS</h3>

@@ -103,12 +103,10 @@ class ArticleTags extends CActiveRecord
 		return parent::model($className);
 	}
 
-    public function getArticleListPageByTag($tag = "all"){
+    public function getArticleListPageByTag($tag){
         $criteria = new CDbCriteria();
         $criteria->compare('is_del',0);
-        if($tag !== "all"){
-            $criteria->compare('tag_name',$tag);
-        }
+        $criteria->compare('tag_name',$tag);
         $count=self::model()->count($criteria);
         $article_list = array();
         $pages=new CPagination($count);

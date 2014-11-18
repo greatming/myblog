@@ -14,4 +14,6 @@ class ArticleVars {
 
     const SEARCH_TAGS_LIMIT = 10;
 
+    const MORE_TAGS_LIMIT = 10;
+
 } 
