@@ -13,4 +13,18 @@
 
 window.HM = window.HM || {};
 
+//sea.js 配置
+try{
+    if(seajs){
+        seajs.config({
+            base: "/js/",
+            alias: {
+                "moment" : "moment.js"
+            }
+        });
+    }
+}catch (e){
+    console.log(e.name+": "+ e.message);
+}
+
 

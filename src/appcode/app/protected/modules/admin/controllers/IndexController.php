@@ -17,7 +17,7 @@ class IndexController extends BaseController
 
         $count=Article::model()->count($criteria);
         $pages=new CPagination($count);
-        $pages->pageSize=2;
+        $pages->pageSize=10;
         $pages->applyLimit($criteria);
         $list = Article::model()->findAll($criteria);
         $this->render('article',array(

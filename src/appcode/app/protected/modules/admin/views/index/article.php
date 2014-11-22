@@ -50,10 +50,14 @@
             <button class="btn btn-xs btn-info" style="margin-right: 20px;" rel="<?php echo $this->createUrl('index/EditArticle',array('id'=>$article->id));?>" id="edit">
                 <i class="ace-icon fa fa-pencil bigger-120"></i>
             </button>
-
-            <button class="btn btn-xs btn-danger" id="del"  rel="<?php echo $article->id;?>">
+            <button class="btn btn-xs btn-danger" style="margin-right: 20px;" id="del"  rel="<?php echo $article->id;?>">
                 <i class="ace-icon fa fa-trash-o bigger-120"></i>
             </button>
+            <a target="_blank" href="<?php echo $this->createUrl('/index/detail',array('id'=>$article->id));?>">
+            <button class="btn btn-xs btn-success"   rel="<?php echo $article->id;?>">
+                <i class="ace-icon fa fa-share bigger-120"></i>
+            </button>
+            </a>
         </div>
 
         <div class="hidden-md hidden-lg">
@@ -86,6 +90,8 @@
 																			</span>
                         </a>
                     </li>
+
+
                 </ul>
             </div>
         </div>
