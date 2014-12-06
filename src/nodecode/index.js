@@ -6,7 +6,7 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var config = require("./config/db");
+var config = require("./config/config");
 
 app.set('view engine', 'ejs');
 app.locals.baseurl = 'http://blog.greatming.cn/';

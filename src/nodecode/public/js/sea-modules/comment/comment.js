@@ -1,6 +1,5 @@
 define(function(require, exports, module) {
     var moment = require("moment");
-    require("Jplugin/popup/prompt");
     module.exports = {
         init:function(){
             getCommentList();
@@ -9,6 +8,7 @@ define(function(require, exports, module) {
                     user_name : $("input[name='user_name']").val(),
                     content : $("#content").val()
                 };
+                require("Jplugin/popup/prompt");
                 if(check_comment_submit(post_obj)){
                     $.post("/comment/add",post_obj,function(ret){
                         if(ret.status == 1){
